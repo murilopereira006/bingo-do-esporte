@@ -1,7 +1,99 @@
 export default function Card() {
   return (
-    <>
-    
-    </>
+    <table>
+      <tbody>
+        
+      <tr>
+          <td>
+            <span>1</span>
+          </td>
+          <td>
+            <span>2</span>
+          </td>
+          <td>
+            <span>3</span>
+          </td>
+          <td>
+            <span>4</span>
+          </td>
+          <td>
+            <span>5</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span>1</span>
+          </td>
+          <td>
+            <span>2</span>
+          </td>
+          <td>
+            <span>3</span>
+          </td>
+          <td>
+            <span>4</span>
+          </td>
+          <td>
+            <span>5</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span>1</span>
+          </td>
+          <td>
+            <span>2</span>
+          </td>
+          <td>
+            <span>3</span>
+          </td>
+          <td>
+            <span>4</span>
+          </td>
+          <td>
+            <span>5</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span>1</span>
+          </td>
+          <td>
+            <span>2</span>
+          </td>
+          <td>
+            <span>3</span>
+          </td>
+          <td>
+            <span>4</span>
+          </td>
+          <td>
+            <span>5</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span>1</span>
+          </td>
+          <td>
+            <span>2</span>
+          </td>
+          <td>
+            <span>3</span>
+          </td>
+          <td>
+            <span>4</span>
+          </td>
+          <td>
+            <span>5</span>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
   );
 }
