@@ -8,7 +8,7 @@ interface CardProps {
 const CardStyled = styled.td<{ rightAnswer: boolean }>`
   width: 80px;
   height: 80px;
-  background-color: ${props => props.rightAnswer ? 'green' : 'red'};
+  background-color: ${props => props.rightAnswer ? '#497174' : '#EB6440'};
   border-radius: 5px;
   cursor: pointer;
   box-sizing: border-box;
@@ -24,7 +24,7 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  background-color: #CAEDFF;
   border-radius: 5px;
   cursor: pointer;
   box-sizing: border-box;
