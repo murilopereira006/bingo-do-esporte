@@ -1,99 +1,20 @@
-export default function Card() {
-  return (
-    <table>
-      <tbody>
-        
-      <tr>
-          <td>
-            <span>1</span>
-          </td>
-          <td>
-            <span>2</span>
-          </td>
-          <td>
-            <span>3</span>
-          </td>
-          <td>
-            <span>4</span>
-          </td>
-          <td>
-            <span>5</span>
-          </td>
-        </tr>
+import styled from 'styled-components'
 
-        <tr>
-          <td>
-            <span>1</span>
-          </td>
-          <td>
-            <span>2</span>
-          </td>
-          <td>
-            <span>3</span>
-          </td>
-          <td>
-            <span>4</span>
-          </td>
-          <td>
-            <span>5</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <span>1</span>
-          </td>
-          <td>
-            <span>2</span>
-          </td>
-          <td>
-            <span>3</span>
-          </td>
-          <td>
-            <span>4</span>
-          </td>
-          <td>
-            <span>5</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <span>1</span>
-          </td>
-          <td>
-            <span>2</span>
-          </td>
-          <td>
-            <span>3</span>
-          </td>
-          <td>
-            <span>4</span>
-          </td>
-          <td>
-            <span>5</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <span>1</span>
-          </td>
-          <td>
-            <span>2</span>
-          </td>
-          <td>
-            <span>3</span>
-          </td>
-          <td>
-            <span>4</span>
-          </td>
-          <td>
-            <span>5</span>
-          </td>
-        </tr>
-        
-      </tbody>
-    </table>
-  );
+interface CardProps {
+    content: number;
 }
+
+const CardStyled = styled.td`
+  width: 90px;
+  height: 90px;
+  background-color: red;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  text-align: center;
+`
+const Card: React.FC<CardProps> = ({ content }) => {
+    return <CardStyled>{content}</CardStyled>;
+};
+  
+export default Card;
