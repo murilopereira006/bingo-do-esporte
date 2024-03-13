@@ -9,7 +9,15 @@ const db = new PrismaClient();
 app.use(swagger())
 
 app.get("/", async () => {
-  const users = await db.noc_region.findMany()
+  const athets = await db.dataset_olympics.findMany({
+    where: {
+      NOC: 'BRA',
+      AND: {
+        Medal: "Gold"
+      }
+    }
+  })
+  console.log(athets)
 });
 app.get("/teste", () => "Tchau Elysia");
 app.listen(port);

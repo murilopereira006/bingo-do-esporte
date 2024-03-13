@@ -19,7 +19,7 @@ model dataset_olympics {
   Id_Athlete Int
   Name       String? @db.Text
   Sex        String? @db.Text
-  Age        BigInt?
+  Age        Int?
   Height     Float?
   Weight     Float?
   Team       String? @db.Text
