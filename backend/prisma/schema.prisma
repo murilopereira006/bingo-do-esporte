@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model dataset_olympics {
+  ID     Int?
+  Name   String? @db.Text
+  Sex    String? @db.Text
+  Age    BigInt?
+  Height Float?
+  Weight Float?
+  Team   String? @db.Text
+  NOC    String? @db.Text
+  Games  String? @db.Text
+  Year   Int?
+  Season String? @db.Text
+  City   String? @db.Text
+  Sport  String? @db.Text
+  Event  String? @db.Text
+  Medal  String? @db.Text
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model noc_region {
+  noc_region String? @db.Text
+  reg        String? @db.Text
+  notes      String? @db.Text
+
+  @@ignore
+}
