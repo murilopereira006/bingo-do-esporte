@@ -9,9 +9,7 @@ const db = new PrismaClient();
 app.use(swagger())
 
 app.get("/", async () => {
-  // async ({ body }) => db.user.create({ 
-  //   data: body 
-  // })
+  const users = await db.noc_region.findMany()
 });
 app.get("/teste", () => "Tchau Elysia");
 app.listen(port);

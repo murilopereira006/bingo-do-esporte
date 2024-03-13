@@ -7,32 +7,35 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
-model dataset_olympics {
-  ID     Int?
-  Name   String? @db.Text
-  Sex    String? @db.Text
-  Age    BigInt?
-  Height Float?
-  Weight Float?
-  Team   String? @db.Text
-  NOC    String? @db.Text
-  Games  String? @db.Text
-  Year   Int?
-  Season String? @db.Text
-  City   String? @db.Text
-  Sport  String? @db.Text
-  Event  String? @db.Text
-  Medal  String? @db.Text
-
-  @@ignore
+model user {
+  id       Int    @unique @default(autoincrement())
+  name     String
+  password String
+  email    String @unique
 }
 
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model dataset_olympics {
+  id         Int     @unique @default(autoincrement())
+  Id_Athlete Int
+  Name       String? @db.Text
+  Sex        String? @db.Text
+  Age        BigInt?
+  Height     Float?
+  Weight     Float?
+  Team       String? @db.Text
+  NOC        String? @db.Text
+  Games      String? @db.Text
+  Year       Int
+  Season     String? @db.Text
+  City       String? @db.Text
+  Sport      String? @db.Text
+  Event      String? @db.Text
+  Medal      String? @db.Text
+}
+
 model noc_region {
+  id         Int     @id @default(autoincrement())
   noc_region String? @db.Text
   reg        String? @db.Text
   notes      String? @db.Text
-
-  @@ignore
 }
