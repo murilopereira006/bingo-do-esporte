@@ -16,7 +16,6 @@ interface CardContainer {
 const CardContainer: React.FC<CardContainer> = ({ data }) => {
   const rows: JSX.Element[] = [];
   let currentRow: JSX.Element[] = [];
-  console.log("aaaaaaaaaaa ", data)
 
   data.forEach((item: AthleteData, index: number) => {
     currentRow.push(<Card content={item.Age} key={index} />);
