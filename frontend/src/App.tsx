@@ -1,6 +1,9 @@
-import Header from "./components/Header"
-import GameFrame from "./components/GameFrame"
-import styled from 'styled-components'
+import { useEffect, useState } from 'react';
+import AthleteData from "../core/AthleteData"
+import Header from "./components/Header";
+import GameFrame from "./components/GameFrame";
+import styled from 'styled-components';
+import fetchDataFromLocalServer from './api';
 
 const Container = styled.div`
   width: 100vw;
@@ -13,12 +16,27 @@ const Container = styled.div`
 `;
 
 function App() {
+  const [data, setData] = useState<AthleteData[] | string >([]); // Definindo o estado para armazenar os dados
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const fetchedData = await fetchDataFromLocalServer();
+        setData(fetchedData);
+      } catch (error) {
+        console.error('Ocorreu um erro ao buscar os dados:', error);
+      }
+    };
+
+    getData();
+  }, [])
+
   return (
     <Container>
-      <Header />      
-      <GameFrame />
+      <Header />
+      <GameFrame data={data} />
     </Container>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,5 +1,6 @@
-import Card from "../Card";
 import styled from 'styled-components'
+import AthleteData from "../../../core/AthleteData"
+import Card from "../Card";
 
 const Table = styled.table`
   width: 100%;
@@ -7,15 +8,19 @@ const Table = styled.table`
   border-spacing: 10px;
 `
 
-const teste = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+interface CardContainer {
+  data: AthleteData[];
+}
 
-export default function CardContainer() {
+
+const CardContainer: React.FC<CardContainer> = ({ data }) => {
   const rows: JSX.Element[] = [];
   let currentRow: JSX.Element[] = [];
+  console.log("aaaaaaaaaaa ", data)
 
-  teste.forEach((item: number, index: number) => {
-    currentRow.push(<Card content={item} key={index} />);
-    if ((index + 1) % 5 === 0 || index === teste.length - 1) {
+  data.forEach((item: AthleteData, index: number) => {
+    currentRow.push(<Card content={item.Age} key={index} />);
+    if ((index + 1) % 5 === 0 || index === data.length - 1) {
       rows.push(<tr key={index}>{currentRow}</tr>);
       currentRow = [];
     }
@@ -29,3 +34,5 @@ export default function CardContainer() {
     </Table>
   );
 }
+
+export default CardContainer;
