@@ -1,5 +1,5 @@
 import axios from 'axios';
-import AthleteData from "../../core/AthleteData"
+import AthleteData from "../core/AthleteData"
 
 const urlBase: string = import.meta.env.VITE_BASE_API_URL
 

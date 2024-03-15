@@ -39,3 +39,10 @@ model noc_region {
   reg        String? @db.Text
   notes      String? @db.Text
 }
+
+// model achievemenet {
+//   id         Int    @id @default(autoincrement())
+//   spot_name  String @unique
+//   photo_name String
+//   photo_id   Int
+// }

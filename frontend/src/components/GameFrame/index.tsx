@@ -1,4 +1,4 @@
-import AthleteData from "../../../core/AthleteData"
+import AthleteData from "../../core/AthleteData"
 import CardContainer from "../CardContainer";
 import CardHeader from "../CardHeader";
 import styled from 'styled-components';

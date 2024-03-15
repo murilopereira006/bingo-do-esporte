@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import AthleteData from "../../../core/AthleteData"
+import AthleteData from "../../core/AthleteData"
 import Card from "../Card";
 
 const Table = styled.table`

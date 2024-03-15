@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import AthleteData from "../core/AthleteData"
+import AthleteData from "./core/AthleteData"
 import Header from "./components/Header";
 import GameFrame from "./components/GameFrame";
 import styled from 'styled-components';
