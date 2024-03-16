@@ -3,7 +3,7 @@ import AchievemenetImage from "../core/achievemenetImage";
 export const Sydney:AchievemenetImage = {
     id: 44,
     name: 'Sydney 2000',
-    image_url: "./img/Default_Sydney_Australia_flat_3D_miniature_0.png"
+    image_url: "src/assets/img/Default_Atlanta_USA_flat_3D_miniature_2.png"
 }
 
 export const Athina:AchievemenetImage = {
