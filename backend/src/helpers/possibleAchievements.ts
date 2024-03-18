@@ -11,7 +11,7 @@ import {
     Rio
 } from "../assets";
 
-const ImageSelector = (reference: string): AchievementImage => {
+const ImageSelector = (reference: String): AchievementImage => {
     switch (true) {
         case reference.includes("Sydney") || reference.includes("2000"):
             return Sydney
@@ -40,7 +40,7 @@ export const HasAnyMedal = (): Achievement => {
     };
 };
 
-export const HasAnyMedalInCity = (cityName: string): Achievement => {
+export const HasAnyMedalInCity = (cityName: String): Achievement => {
     const cityImage = ImageSelector(cityName);
     return {
         name: `Medalist in ${cityName}`,
@@ -48,7 +48,7 @@ export const HasAnyMedalInCity = (cityName: string): Achievement => {
     };
 };
 
-export const HasAnyMedalInYear = (year: string): Achievement => {
+export const HasAnyMedalInYear = (year: String): Achievement => {
     const cityImage = ImageSelector(year);
     return {
         name: `Medalist in ${year}`,
@@ -56,7 +56,7 @@ export const HasAnyMedalInYear = (year: string): Achievement => {
     };
 };
 
-export const GoldMedalInCity = (cityName: string): Achievement => {
+export const GoldMedalInCity = (cityName: String): Achievement => {
     const cityImage = ImageSelector(cityName);
     return {
         name: `Gold Medal in ${cityName}`,
@@ -64,7 +64,7 @@ export const GoldMedalInCity = (cityName: string): Achievement => {
     };
 };
 
-export const SilverMedalInCity = (cityName: string): Achievement => {
+export const SilverMedalInCity = (cityName: String): Achievement => {
     const cityImage = ImageSelector(cityName);
     return {
         name: `Silver Medal in ${cityName}`,
@@ -72,7 +72,7 @@ export const SilverMedalInCity = (cityName: string): Achievement => {
     };
 };
 
-export const CupperMedalInCity = (cityName: string): Achievement => {
+export const CupperMedalInCity = (cityName: String): Achievement => {
     const cityImage = ImageSelector(cityName);
     return {
         name: `Cupper Medal in ${cityName}`,
@@ -80,7 +80,7 @@ export const CupperMedalInCity = (cityName: string): Achievement => {
     };
 };
 
-export const GoldMedalInYear = (year: string): Achievement => {
+export const GoldMedalInYear = (year: String): Achievement => {
     const yearImage = ImageSelector(year);
     return {
         name: `Gold Medal in ${year}`,
@@ -88,7 +88,7 @@ export const GoldMedalInYear = (year: string): Achievement => {
     };
 };
 
-export const SilverMedalInYear = (year: string): Achievement => {
+export const SilverMedalInYear = (year: String): Achievement => {
     const yearImage = ImageSelector(year);
     return {
         name: `Silver Medal in ${year}`,
@@ -96,7 +96,7 @@ export const SilverMedalInYear = (year: string): Achievement => {
     };
 };
 
-export const CupperMedalInYear = (year: string): Achievement => {
+export const CupperMedalInYear = (year: String): Achievement => {
     const yearImage = ImageSelector(year);
     return {
         name: `Cupper Medal in ${year}`,
@@ -104,7 +104,7 @@ export const CupperMedalInYear = (year: string): Achievement => {
     };
 };
 
-export const WasInCity = (cityName: string): Achievement => {
+export const WasInCity = (cityName: String): Achievement => {
     const cityImage = ImageSelector(cityName);
     return {
         name: `Competed in ${cityName}`,
@@ -112,7 +112,7 @@ export const WasInCity = (cityName: string): Achievement => {
     };
 };
 
-export const WasInYear = (year: string): Achievement => {
+export const WasInYear = (year: String): Achievement => {
     const yearImage = ImageSelector(year);
     return {
         name: `Competed in ${year}`,

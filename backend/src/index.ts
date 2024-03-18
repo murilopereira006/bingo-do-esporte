@@ -13,5 +13,5 @@ app.use(router)
 app.listen(port);
 
 console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+    `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
 );
