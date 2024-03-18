@@ -1,4 +1,22 @@
-import AchievemenetImage from "../core/achievemenetImage";
+import AchievemenetImage from "../core/achievementImage";
+
+export const GoldMedal:AchievemenetImage = {
+    id: 1,
+    name: 'Gold Medal',
+    image_url: "src/assets/img/Default_Gold_medal_for_the_1st_place_flat_3d_1.png"
+}
+
+export const SilverMedal:AchievemenetImage = {
+    id: 2,
+    name: 'Silver Medal',
+    image_url: "src/assets/img/Default_Siver_medal_with_silver_metal_color_in_medal_material_1.png"
+}
+
+export const CupperMedal:AchievemenetImage = {
+    id: 3,
+    name: 'Cupper Medal',
+    image_url: "src/assets/img/Default_Cupper_medal_with_cupper_metal_color_in_medal_material_3.png"
+}
 
 export const Sydney:AchievemenetImage = {
     id: 44,

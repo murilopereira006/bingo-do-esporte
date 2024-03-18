@@ -40,9 +40,9 @@ model noc_region {
   notes      String? @db.Text
 }
 
-// model achievemenet {
+// model Achievement {
 //   id         Int    @id @default(autoincrement())
-//   spot_name  String @unique
+//   name  String @unique
 //   photo_name String
 //   photo_id   Int
 // }
