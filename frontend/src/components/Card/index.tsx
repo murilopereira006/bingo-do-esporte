@@ -33,7 +33,8 @@ const Card: React.FC<CardProps> = ({ content, rightAnswer }) => {
   console.log(content)
     return (<CardStyled rightAnswer={rightAnswer}>
         {/* <Content>{content}</Content> */}
-        <img src={content.image_composition[1].image_url} alt={content.name} />
+        <img style={{ width: '50px', height: '50px' }} src={content.image_composition[0].image_url} alt={content.name} />
+        <img style={{ width: '50px', height: '50px' }} src={content.image_composition[1].image_url} alt={content.name} />
     </CardStyled>);
 };
   
