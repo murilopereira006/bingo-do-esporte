@@ -2,7 +2,6 @@ import Router from 'elysia';
 import { PrismaClient } from '@prisma/client';
 import { sortedAchievements } from "../controllers"
 import path from 'path';
-// import { Rio, London, Beijing, Athina, Sydney } from '../assets';
 
 const router = new Router();
 const db = new PrismaClient();
@@ -14,6 +13,8 @@ router.get("/", () => {
 router.get("/achievements", () => {
     return sortedAchievements
 });
+
+// router.get('/file', async () => await Bun.file(path.join(__dirname, '../', 'assets/', 'img/', 'Default_Athens_Grece_flat_3D_miniature_3.png')))
 
 // router.get("/", async () => {
 //     const athets = await db.dataset_olympics.findMany({

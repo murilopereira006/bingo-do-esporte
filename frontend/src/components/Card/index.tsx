@@ -30,8 +30,10 @@ const Content = styled.div`
   box-sizing: border-box;
 `
 const Card: React.FC<CardProps> = ({ content, rightAnswer }) => {
+  console.log(content)
     return (<CardStyled rightAnswer={rightAnswer}>
-        <Content>{content}</Content>
+        {/* <Content>{content}</Content> */}
+        <img src={content.image_composition[1].image_url} alt={content.name} />
     </CardStyled>);
 };
   

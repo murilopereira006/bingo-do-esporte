@@ -1,7 +1,7 @@
 import axios from 'axios';
 import AthleteData from "../core/AthleteData"
 
-const urlBase: string = import.meta.env.VITE_BASE_API_URL
+const urlBase: string = import.meta.env.VITE_BASE_API_URL + "achievements"
 
 async function fetchDataFromLocalServer(): Promise<AthleteData[] | string > {
     try {

@@ -18,9 +18,9 @@ const CardContainer: React.FC<CardContainer> = ({ data }) => {
   let currentRow: JSX.Element[] = [];
 
   data.forEach((item: AthleteData, index: number) => {
-    currentRow.push(<Card content={item.Age} key={index} />);
+    currentRow.push(<Card content={item} key={index} />);
     if ((index + 1) % 5 === 0 || index === data.length - 1) {
-      rows.push(<tr key={index}>{currentRow}</tr>);
+      if (index <= 25) rows.push(<tr key={index}>{currentRow}</tr>);
       currentRow = [];
     }
   });

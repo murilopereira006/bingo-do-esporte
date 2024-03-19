@@ -8,8 +8,8 @@ const app = new Elysia();
 
 app.use(cors())
 app.use(swagger())
-app.use(router)
 
+app.use(router)
 app.listen(port);
 
 console.log(
