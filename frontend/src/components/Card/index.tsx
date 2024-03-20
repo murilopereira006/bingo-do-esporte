@@ -1,8 +1,17 @@
 import styled from 'styled-components'
 
 interface CardProps {
-    content: number;
-    rightAnswer: boolean;
+  content: ContentProps;
+  rightAnswer: boolean;
+}
+
+interface ContentProps {
+  image_composition: Test[];
+  name: string;
+}
+
+interface Test {
+  image_url: string;
 }
 
 const CardStyled = styled.td<{ rightAnswer: boolean }>`
@@ -32,9 +41,10 @@ const Content = styled.div`
 const Card: React.FC<CardProps> = ({ content, rightAnswer }) => {
   console.log(content)
     return (<CardStyled rightAnswer={rightAnswer}>
-        {/* <Content>{content}</Content> */}
-        <img style={{ width: '50px', height: '50px' }} src={content.image_composition[0].image_url} alt={content.name} />
-        <img style={{ width: '50px', height: '50px' }} src={content.image_composition[1].image_url} alt={content.name} />
+        <Content>
+          <img style={{ width: '50px', height: '50px' }} src={content.image_composition[0].image_url} alt={content.name} />
+          <img style={{ width: '50px', height: '50px' }} src={content.image_composition[1].image_url} alt={content.name} />
+        </Content>
     </CardStyled>);
 };
   
