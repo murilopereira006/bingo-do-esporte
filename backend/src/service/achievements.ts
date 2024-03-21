@@ -1,4 +1,4 @@
-import { GoldMedalInCity, GoldMedalInYear } from "../helpers/possibleAchievements"
+import { GoldMedalInCity, GoldMedalInYear, SilverMedalInCity, SilverMedalInYear } from "../helpers/possibleAchievements"
 import Achievement from "../core/achievement";
 import level from "../core/levelOfDifficulty";
 
@@ -13,8 +13,20 @@ const getRandomItemFromArray = (array: String[]): String => {
 }
 
 const getRandomEvent = (level: level): Achievement => {
-    if (getRandomBoolean() === true) return GoldMedalInCity(getRandomItemFromArray(level.cities))
-    else return GoldMedalInYear(getRandomItemFromArray(level.years))
+    if (getRandomBoolean() === true) {
+        if (getRandomBoolean() === true) {
+            return GoldMedalInCity(getRandomItemFromArray(level.cities))
+        } else {
+            return SilverMedalInCity(getRandomItemFromArray(level.cities))
+        }
+    }
+    else {
+        if (getRandomBoolean() === true) {
+            return GoldMedalInYear(getRandomItemFromArray(level.years))
+        } else {
+            return SilverMedalInYear(getRandomItemFromArray(level.years))
+        }
+    }
 }
 
 export const randomAchievement = (level: level): Achievement => {
