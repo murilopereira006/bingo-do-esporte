@@ -18,6 +18,12 @@ export const CupperMedal:AchievemenetImage = {
     image_url: "src/assets/img/Default_Cupper_medal_with_cupper_metal_color_in_medal_material_3.png"
 }
 
+export const AnyMedal:AchievemenetImage = {
+    id: 4,
+    name: 'Cupper AnyMedal',
+    image_url: "src/assets/img/6986c9e1e2c51f23b2fa7c647476e80a3dff6a28_full.jpg"
+}
+
 export const Sydney:AchievemenetImage = {
     id: 44,
     name: 'Sydney 2000',

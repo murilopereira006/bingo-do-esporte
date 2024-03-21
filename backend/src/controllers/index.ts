@@ -1,7 +1,6 @@
 import { randomAchievement } from "../service/achievements"
 import { easy } from "../helpers/listOfLevels"
 import Achievement from "../core/achievement"
-import path from 'path'
 
 export const sortedAchievements = (): Achievement[] => {
     let responseArray: Achievement[] = []

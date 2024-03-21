@@ -1,6 +1,7 @@
 import Achievement from "../core/achievement";
 import AchievementImage from "../core/achievementImage";
 import {
+    AnyMedal,
     GoldMedal,
     SilverMedal,
     CupperMedal,
@@ -36,7 +37,7 @@ const ImageSelector = (reference: String): AchievementImage => {
 export const HasAnyMedal = (): Achievement => {
     return {
         name: `Medalist`,
-        image_composition: [GoldMedal, SilverMedal, CupperMedal]
+        image_composition: [AnyMedal]
     };
 };
 
@@ -44,7 +45,7 @@ export const HasAnyMedalInCity = (cityName: String): Achievement => {
     const cityImage = ImageSelector(cityName);
     return {
         name: `Medalist in ${cityName}`,
-        image_composition: [GoldMedal, SilverMedal, CupperMedal, cityImage]
+        image_composition: [AnyMedal, cityImage]
     };
 };
 
@@ -52,7 +53,7 @@ export const HasAnyMedalInYear = (year: String): Achievement => {
     const cityImage = ImageSelector(year);
     return {
         name: `Medalist in ${year}`,
-        image_composition: [GoldMedal, SilverMedal, CupperMedal, cityImage]
+        image_composition: [AnyMedal, cityImage]
     };
 };
 
