@@ -1,16 +1,30 @@
-import { randomAchievement } from "../service/achievements"
+import { get50Achievements, get3AthleteForEachAchievement } from "../service/achievements"
 import { easy } from "../helpers/listOfLevels"
 import Achievement from "../core/achievement"
+import ObjResponse from "../core/objResponse"
+import level from "../core/levelOfDifficulty"
 
-export const sortedAchievements = (): Achievement[] => {
-    let responseArray: Achievement[] = []
+export const sortedAchievements = (level: level): Achievement[] => {
+    return get50Achievements(level ? level : easy)
+}
 
-    while (responseArray.length < 50) {
-        responseArray.push(randomAchievement(easy))
+export const athleteToAnsewrs = async (arrayOfAchievementslevel: Achievement[], level: level): Promise<ObjResponse> => {
+    let response: ObjResponse = {
+        achievements: [],
+        athletes: []
     }
-    // sortear um ano ou cidade
-    // Consferir se ano ou cidade eh existente
-    // Adicionar o "achievemetne" no array resposta
-    // tratar o path de imagem do array responsta
-    return responseArray
+
+    if(!response.achievements || response.achievements.length < 50) {
+        response.achievements = get50Achievements(level ? level : easy)
+    } else {
+        response.achievements = arrayOfAchievementslevel
+    }
+
+    response.athletes = await get3AthleteForEachAchievement(response.achievements)
+
+    // recebe array de achievemets
+    // busca atlhetas para cada achievement
+    // adiciona no array de resposta
+
+    return response
 }

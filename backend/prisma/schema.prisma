@@ -17,11 +17,11 @@ model user {
 model dataset_olympics {
   id         Int     @unique @default(autoincrement())
   Id_Athlete Int
-  Name       String? @db.Text
+  Name       String  @db.Text
   Sex        String? @db.Text
   Age        Int?
-  Height     Float?
-  Weight     Float?
+  Height     Int?
+  Weight     Int?
   Team       String? @db.Text
   NOC        String? @db.Text
   Games      String? @db.Text
